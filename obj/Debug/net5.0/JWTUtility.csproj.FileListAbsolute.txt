@@ -27,3 +27,10 @@ D:\TEMPLATES\JWTUtility\obj\Debug\net5.0\JWTUtility.dll
 D:\TEMPLATES\JWTUtility\obj\Debug\net5.0\ref\JWTUtility.dll
 D:\TEMPLATES\JWTUtility\obj\Debug\net5.0\JWTUtility.pdb
 D:\TEMPLATES\JWTUtility\obj\Debug\net5.0\JWTUtility.genruntimeconfig.cache
+D:\TEMPLATES\JWTUtility\bin\Debug\net5.0\IdentityModel.dll
+D:\TEMPLATES\JWTUtility\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\TEMPLATES\JWTUtility\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+D:\TEMPLATES\JWTUtility\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+D:\TEMPLATES\JWTUtility\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+D:\TEMPLATES\JWTUtility\bin\Debug\net5.0\System.Text.Encodings.Web.dll
+D:\TEMPLATES\JWTUtility\bin\Debug\net5.0\System.Text.Json.dll
