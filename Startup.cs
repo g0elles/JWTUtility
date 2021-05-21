@@ -10,7 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Microsoft.OpenApi.Models;
+using JWTUtility.Helpers;
+using JWTUtility.Services;
 
 namespace JWTUtility
 {
@@ -27,11 +28,10 @@ namespace JWTUtility
         public void ConfigureServices(IServiceCollection services)
         {
 
+            services.AddCors();
             services.AddControllers();
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "JWTUtility", Version = "v1" });
-            });
+            services.Configure<Appsettings>(Configuration.GetSection("AppSettings"));
+            services.AddScoped<IUserService,UserService>(); 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,6 +54,12 @@ namespace JWTUtility
             {
                 endpoints.MapControllers();
             });
+            app.UseCors(x => x
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader());
+            app.UseMiddleware<JwtMiddleware>();
+            app.UseEndpoints(x => x.MapControllers());
         }
     }
 }
